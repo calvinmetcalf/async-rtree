@@ -1,38 +1,28 @@
 {
-  "name": "level-tree",
+  "name": "async-rtree",
   "version": "0.3.0",
-  "description": "geohash (ish) nontree (9-tree) spatial indexing for GeoJSON in LevelDB",
+  "description": "an async rtree suitable for use with leveldb",
   "main": "lib/index.js",
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test.js"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "geojson-bounding-volume": "~0.1.1",
-    "level-sublevel": "^5.2.0",
-    "es6-set": "0.0.0",
-    "through2": "^0.4.1",
-    "level-trigger": "^1.3.1",
-    "combined-stream": "0.0.4",
     "node-uuid": "^1.4.1",
     "inherits": "^2.0.1",
     "readable-stream": "^1.0.27-1"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/calvinmetcalf/level-tree.git"
+    "url": "git://github.com/calvinmetcalf/async-rtree.git"
   },
   "devDependencies": {
-    "level": "^0.18.0",
-    "tape": "^2.12.0",
-    "leveldown": "^0.10.2"
+    "tape": "^2.12.0"
   },
   "keywords": [
-    "levelup",
-    "hyper-level",
-    "geospatial",
-    "geohash",
-    "geojson"
+    "rtree",
+    "async",
+    "geospatial"
   ]
 }
