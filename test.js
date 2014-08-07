@@ -17,7 +17,7 @@ test('large query', function (t) {
   promise.then(function () {
     return Promise.all(out);
   }).then(function (a) {
-    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ]);
+    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ], true);
   }).then(function(a){
     t.equals(a.length, 102);
   }).catch(function (e) {
@@ -39,7 +39,7 @@ test('small query', function (t) {
   promise.then(function () {
     return Promise.all(out);
   }).then(function (a) {
-    return l.query([ [ 31, 30 ], [ 50, 60 ] ]);
+    return l.query([ [ 31, 30 ], [ 50, 60 ] ], true);
   }).then(function(a){
     t.equals(a.length, 2);
   }).catch(function (e) {
@@ -61,18 +61,18 @@ test('remove', function (t) {
   promise.then(function () {
     return Promise.all(out);
   }).then(function (a) {
-    return l.query([ [ 31, 30 ], [ 50, 60 ] ]);
+    return l.query([ [ 31, 30 ], [ 50, 60 ] ], true);
   }).then(function(a){
     t.equals(a.length, 2);
-    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ]);
+    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ], true);
   }).then(function (a){
     t.equals(a.length, 102);
     return l.remove('fafa',[[32,40],[50,60]]);
   }).then(function (a) {
-    return l.query([ [ 31, 30 ], [ 50, 60 ] ]);
+    return l.query([ [ 31, 30 ], [ 50, 60 ] ], true);
   }).then(function(a){
     t.equals(a.length, 1);
-    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ]);
+    return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ], true);
   }).then(function (a){
     t.equals(a.length, 101);
   }).catch(function (e) {
