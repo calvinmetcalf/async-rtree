@@ -2,7 +2,7 @@
 var LT = require('./lib/index');
 var Promise = require('bluebird');
 var test = require('tape');
-
+var fs = require('fs');
 test('large query', function (t) {
   t.plan(1);
   var l = new LT();
@@ -79,4 +79,29 @@ test('remove', function (t) {
     t.notOk(e, e.stack);
   });
 
+});
+
+test('loading', function (t) {
+  var load = require('./lib/load');
+  var out = [];
+  var i = 100;
+  out.push({
+    id: 'lala',
+    bbox: [[40,40],[40,40]]
+  });
+  out.push({
+    id: 'fafa',
+    bbox: [[50,60],[50,60]]
+  });
+  function pushit(i) {
+    out.push({
+      id: 'afa'+i,
+      bbox:[[20-i,30-i],[20-i,30-i]]
+    })
+  }
+  while (i--) {
+      pushit(i);
+  }
+  fs.writeFileSync('./thing.json',JSON.stringify(load(out), false, 4),{encoding:'utf8'});
+  t.end();
 });
