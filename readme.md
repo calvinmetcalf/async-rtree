@@ -9,9 +9,11 @@ Currently features the following methods
 
 ```js
 rtree.insert('id', bbox, callback);
-rtree.insert('id', bbox, callback);
+rtree.remove('id', bbox, callback);
 rtree.query(bbox);// returns stream
+rtree.insert('id', bbox, callback);
 rtree.query(bbox, cb);// array
+rtree.bulk(array, cb);// array members of of the form {id:id, bbox:bbox}
 ```
 
 All the rtree stores is the id and bbox, any other data you want to store you need to store elsewhere.
@@ -20,4 +22,5 @@ todo
 ====
 
 
-- Batch inserts and deletes.
+- Batch deletes.
+- delete without exact bbox

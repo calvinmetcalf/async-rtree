@@ -80,6 +80,7 @@ test('remove', function (t) {
   });
 
 });
+
 test('bulk loaded large query', function (t) {
   t.plan(2);
   var l = new LT();
