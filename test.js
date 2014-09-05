@@ -14,7 +14,6 @@ function promiseQuery(db, bbox) {
   });
 }
 test('large query', function (t) {
-  t.plan(1);
   var l = new LT();
   var i = 100;
   var promise = l.insert('lala', [[31,30],[40,40]]).then(function (a){
@@ -30,8 +29,10 @@ test('large query', function (t) {
     return l.query([ [ -10000, -10000 ], [ 10000, 10000 ] ], true);
   }).then(function(a){
     t.equals(a.length, 102);
+    t.end();
   }).catch(function (e) {
     t.notOk(e);
+    t.end();
   });
 
 });

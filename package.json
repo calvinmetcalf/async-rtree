@@ -13,7 +13,9 @@
     "inherits": "^2.0.1",
     "readable-stream": "^1.0.27-1",
     "bluebird": "^2.2.2",
-    "xtend": "^4.0.0"
+    "xtend": "^4.0.0",
+    "stringmap": "^0.2.2",
+    "stringset": "^0.2.1"
   },
   "repository": {
     "type": "git",
