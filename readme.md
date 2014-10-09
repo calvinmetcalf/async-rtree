@@ -1,4 +1,4 @@
-async-rtree
+async-rtree [![Build Status](https://travis-ci.org/calvinmetcalf/async-rtree.svg)](https://travis-ci.org/calvinmetcalf/async-rtree)
 ===
 
 An async RTree, suitable for use with levelup, based on [rbush](https://github.com/mourner/rbush).  Constructor takes an argument 'store', which is a leveldb style datastore with get, put, del, and batch methods.
@@ -10,6 +10,7 @@ Currently features the following methods
 ```js
 rtree.insert('id', bbox, callback);
 rtree.remove('id', bbox, callback);
+rtree.remove('id', callback);
 rtree.query(bbox);// returns stream
 rtree.insert('id', bbox, callback);
 rtree.query(bbox, cb);// array
@@ -22,4 +23,3 @@ todo
 ====
 
 - Batch deletes.
-- delete without exact bbox
