@@ -1,6 +1,6 @@
 {
   "name": "async-rtree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "an async rtree suitable for use with leveldb",
   "main": "lib/index.js",
   "scripts": {
