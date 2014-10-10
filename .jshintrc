@@ -11,5 +11,8 @@
   "white": true,
   "indent": 2,
   "trailing": true,
-  "quotmark": "single"
+  "quotmark": "single",
+  "predef": [
+  "-Promise"
+  ]
 }
