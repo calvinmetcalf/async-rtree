@@ -9,7 +9,6 @@ Currently features the following methods
 
 ```js
 rtree.insert('id', bbox, callback);
-rtree.remove('id', bbox, callback);
 rtree.remove('id', callback);
 rtree.query(bbox);// returns stream
 rtree.insert('id', bbox, callback);
@@ -17,7 +16,7 @@ rtree.query(bbox, cb);// array
 rtree.bulk(array, cb);// array members of of the form {id:id, bbox:bbox}
 ```
 
-All the rtree stores is the id and bbox, any other data you want to store you need to store elsewhere.
+All the rtree stores is the id and bbox, any other data you want to store you need to store elsewhere, as of version 1.0.0 insert strickly speaking upserts the data, e.g. the ids need to be unique.  The upside is that you can remove just by id.
 
 todo
 ====
