@@ -9,14 +9,19 @@ Currently features the following methods
 
 ```js
 rtree.insert('id', bbox, callback);
+rtree.append('id', bbox, callback);
 rtree.remove('id', callback);
+rtree.remove('id', bbox, callback);
 rtree.query(bbox);// returns stream
-rtree.insert('id', bbox, callback);
 rtree.query(bbox, cb);// array
 rtree.bulk(array, cb);// array members of of the form {id:id, bbox:bbox}
 ```
 
-All the rtree stores is the id and bbox, any other data you want to store you need to store elsewhere, as of version 1.0.0 insert strickly speaking upserts the data, e.g. the ids need to be unique.  The upside is that you can remove just by id.
+All the rtree stores is the id and bbox, any other data you want to store you need to store elsewhere.
+
+The difference between insert and append is that insert will delete anything with the id currently in the database while append doesn't care if there is one already in there.
+
+A bbox is optional when using remove, if it's ommited then the bboxen are looked up, if a bbox is provided it must be exact, the only reason you'd want to do that is if you have multiple nodes with the same id and only want to remove 1.
 
 todo
 ====
