@@ -9,12 +9,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "node-uuid": "^1.4.1",
     "bluebird": "^2.2.2",
-    "xtend": "^4.0.0",
+    "noms": "0.0.0",
     "stringmap": "^0.2.2",
     "stringset": "^0.2.1",
-    "noms": "0.0.0"
+    "uuid": "^3.0.0",
+    "xtend": "^4.0.0"
   },
   "repository": {
     "type": "git",
