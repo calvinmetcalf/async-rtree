@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "bluebird": "^2.2.2",
+    "bluebird": "^3.0.0",
     "noms": "0.0.0",
     "stringmap": "^0.2.2",
     "stringset": "^0.2.1",
